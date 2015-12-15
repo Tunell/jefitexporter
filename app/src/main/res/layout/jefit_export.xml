@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res/ru.AenSidhe.jefit.exporter.xlsx"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <fragment android:id="@+id/jefit_export_startDate"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            class="ru.AenSidhe.jefit.exporter.xlsx.DateTimeFragment"
+            app:HintText="@string/jefit_export_start_date_editor_hint"
+            app:DialogTitle="@string/jefit_export_start_date_editor_title"/>
+
+    <fragment android:id="@+id/jefit_export_endDate"
+              android:layout_height="wrap_content"
+              android:layout_width="match_parent"
+              class="ru.AenSidhe.jefit.exporter.xlsx.DateTimeFragment"
+              app:HintText="@string/jefit_export_end_date_editor_hint"
+              app:DialogTitle="@string/jefit_export_end_date_editor_title"/>
+
+    <LinearLayout android:orientation="vertical"
+                  android:gravity="center"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+				  
+		<CheckBox 
+				android:id="@+id/jefit_export_pro"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/jefit_export_pro_checkbox"/>				 
+
+        <Button android:id="@+id/jefit_export_export_button"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/jefit_export_export_button_caption"
+                android:onClick="exportButtonClick"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Google mOutputText"
+        android:id="@+id/mOutputText"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>
